@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\win10\desktop\c\matzeget\matzeget\source.cpp(12): warning C4326: return type of 'main' should be 'int' instead of 'void'
+c:\users\win10\desktop\c\matzeget\matzeget\source.cpp(13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  matzeget.vcxproj -> C:\Users\WIN10\Desktop\C\matzeget\Debug\matzeget.exe

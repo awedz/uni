@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p asd asd asd asd asd asd aaaaaaaaaaa
+  #isOk 
+    -var IsOk = {'name':'isOk'}
+    input(type='checkbox', checked)&attributes(IsOk)
+    p is checked

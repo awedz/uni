@@ -1,0 +1,3 @@
+﻿  Source.cpp
+c:\users\win10\desktop\c\linked_lists\linked_lists\source.cpp(7): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  linked_lists.vcxproj -> C:\Users\WIN10\Desktop\C\linked_lists\Debug\linked_lists.exe
