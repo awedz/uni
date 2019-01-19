@@ -48,7 +48,6 @@ float avg_word_len(char *str)
 }
 void func(int *arr1,int *arr2)
 {
-    
     int j,x;
     for(int i = 1;*(arr1 + i) > 0;i++)
         if(*(arr1 + i) > *(arr1 + i - 1))
