@@ -1,0 +1,66 @@
+MODUL EQU 10;const
+SIZE EQU 8;ARRSIZE
+DSEG SEGMENT;data
+     BLOCKA DB 12,54,23,12,87,90,17,54
+     BLOCKB DB 102,34,203,42,27,98,56,59
+     BLOCKC DB SIZE DUP(?)
+     AHADOT DB ?
+     ASAROT DB ?
+     MEOT   DB ?
+DSEG ENDS       
+
+SSEG SEGMENT STACK
+     DB 100H DUP(?)
+SSEG ENDS
+
+CSEG SEGMENT
+     ASSUME: CS:CSEG, DS:DSEG, SS:SSEG
+BEGIN:
+    MOV AX,DSEG
+    MOV DS,AX
+    MOV ES,AX
+    
+    LEA DI,BLOCKA
+    MOV BL,modul
+    MOV CX,8
+    NEXT:
+    
+    MOV AL,BLOCKA[DI]
+    call PERUK
+    MOV DL,AHADOT
+    ADD DL,ASAROT
+    ADD DL,MEOT
+    MOV AL,BLOCKB[DI]
+    
+    call PERUK
+    MOV DH,AHADOT
+    ADD DH,ASAROT
+    ADD DH,MEOT
+    CMP DL,DH
+    JG BIGGER
+    
+    MOV BH,BLOCKB[DI]
+    JMP DONE
+    
+    BIGGER:
+    MOV BH,BLOCKA[DI]
+    
+    DONE:
+    MOV BLOCKC[DI],BH
+    INC DI
+    LOOP NEXT
+    
+    MOV AH,4CH
+    INT 21H
+    
+    PERUK:
+    MOV AH,0
+    DIV BL
+    MOV AHADOT,AH
+    MOV AH,0
+    div BL 
+    MOV ASAROT,AH
+    MOV MEOT,AL
+    RET
+CSEG ENDS
+END BEGIN

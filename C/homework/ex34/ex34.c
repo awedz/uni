@@ -11,6 +11,14 @@ void FillRandomArr(int arr[], int size);
 
 void main()
 {
+    int a = 3;
+    int b = 4;
+
+    printf("%d"a/b);
+
+
+
+
 
     //global stuff
     srand(time(NULL));

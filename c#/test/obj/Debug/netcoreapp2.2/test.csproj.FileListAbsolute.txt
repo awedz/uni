@@ -1,0 +1,11 @@
+/home/aweds/Desktop/uni/c#/test/bin/Debug/netcoreapp2.2/test.deps.json
+/home/aweds/Desktop/uni/c#/test/bin/Debug/netcoreapp2.2/test.runtimeconfig.json
+/home/aweds/Desktop/uni/c#/test/bin/Debug/netcoreapp2.2/test.runtimeconfig.dev.json
+/home/aweds/Desktop/uni/c#/test/bin/Debug/netcoreapp2.2/test.dll
+/home/aweds/Desktop/uni/c#/test/bin/Debug/netcoreapp2.2/test.pdb
+/home/aweds/Desktop/uni/c#/test/obj/Debug/netcoreapp2.2/test.csprojAssemblyReference.cache
+/home/aweds/Desktop/uni/c#/test/obj/Debug/netcoreapp2.2/test.csproj.CoreCompileInputs.cache
+/home/aweds/Desktop/uni/c#/test/obj/Debug/netcoreapp2.2/test.AssemblyInfoInputs.cache
+/home/aweds/Desktop/uni/c#/test/obj/Debug/netcoreapp2.2/test.AssemblyInfo.cs
+/home/aweds/Desktop/uni/c#/test/obj/Debug/netcoreapp2.2/test.dll
+/home/aweds/Desktop/uni/c#/test/obj/Debug/netcoreapp2.2/test.pdb

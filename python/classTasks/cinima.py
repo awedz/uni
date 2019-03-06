@@ -56,6 +56,9 @@ class Cinema:
         print('row:a-l col:0-7 movie:{0}'.format(self.movieList[0].name)) 
 
 
+print("asdasd")
+asdasd
+
 
 a = Cinema()
 m = 'aaaa-The Movie'
