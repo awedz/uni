@@ -6,25 +6,52 @@ public class Hotel {
 	private int _Rooms;
 	private int _Free;
 	
-	public Hotel(String _Name, String _City, int _Rooms, int _Free) {
-		this._Name = _Name;
-		this._City = _City;
-		this._Rooms = _Rooms;
-		this._Free = _Free;
+	public Hotel(String Name, String City, int Rooms, int Free) {
+		this._Name = Name;
+		this._City = City;
+		this._Rooms = Rooms;
+		this._Free = Free;
 	}
+	
 	public Hotel() {
 		this("NA","NA",0,0);
 	}
-	public String get_Name() {
+	
+	public String GetName() {
 		return _Name;
 	}
-	public String get_City() {
+	
+	public String GetCity() {
 		return _City;
 	}
-	public int get_Rooms() {
+	
+	public int GetRooms() {
 		return _Rooms;
 	}
-	public int get_Free() {
+	
+	public int GetFree() {
 		return _Free;
 	}
+	public void Setfree(int newFreeRooms)
+	{
+		this._Free = newFreeRooms;
+	}
+	
+	public void SetData(String name, String city, int rooms ,int free)
+	{
+		this._Name = name;
+		this._City = city;
+		this._Rooms = rooms;
+		this._Free = free;
+	}
+	public void Print()
+	{
+		System.out.println(String.format("Hotel %s in %s has:%d of which %d is free %s", 
+				this._Name, 
+				this._City, 
+				this._Rooms,
+				this._Free, 
+				((GetRooms() * 60)/100) > GetRooms() - GetFree() ? ",has 40% or more free rooms" : "" ));
+	} 
+	
 }

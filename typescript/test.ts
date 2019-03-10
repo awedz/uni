@@ -1,4 +1,7 @@
 //variables
+//any
+let x              : any = "a";
+    x = 5;
 //numbers
 
 let num_int        : number = 2;
@@ -16,3 +19,16 @@ let str_cast       : string = num_int.toString();
 let isBool         : boolean = true;
 let isBool2        : boolean = false;
 let isbigger       : boolean = 4 < 7;
+//functions
+//                                    return type : void number string bool
+function func(a : number, b : number) : number {
+    return a*b;
+};
+//optional param
+function func_optional(a : number, b? : number) : void {
+    console.log( a * b );
+};
+//args
+function func_args( ...args : number[] ) : void {
+    args.forEach( ( num ) => console.log( num ) );
+};
