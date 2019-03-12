@@ -1,27 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "./headers/student.h"
 #include "string.h"
 
-
-void Push(student_item_t *head,char *id,char *name,int courseCount);
-void Append(student_item_t *head,char *id,char *name,int courseCount);
-void Remove(student_item_t *head,char *id,char *name);
-void Print(student_item_t *head);
-
-void main()
+void InitList(student_list_manager_t *list)
 {
-    student_item_t *head = (student_item_t*)malloc(sizeof(student_item_t));
-    char name[] = "aaaaaa";
-    char id[] = "123456";
-    int num = 1;
-    Append(head,id,name,num);
-    Print(head);
-
-
-
-    printf("test\n");
+	list->Append = Append;
+	list->Push = Push;
+    list->Remove = Remove;
+	list->Print = Print;
 }
+
 void Append(student_item_t *head,char *id,char *name,int courseCount)
 {
     student_item_t *newStudent = (student_item_t*)malloc(sizeof(student_item_t));
@@ -44,12 +31,13 @@ void Append(student_item_t *head,char *id,char *name,int courseCount)
     temp->next_student = newStudent;
 }
 
+
 void Print(student_item_t *head)
 {
     student_item_t *temp = head;
-    while(temp != NULL)
+    while(temp->next_student != NULL)
     {
-        printf("%s %s\n",temp->id,temp->name);
+        printf("%s %s",temp->id,temp->name);
         temp = temp->next_student;
     }
 }
