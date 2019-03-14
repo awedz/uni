@@ -14,7 +14,7 @@ typedef struct student_item{
 
 typedef struct student_list_manager{
     student_item_t *head;
-    void(*Append)(student_item_t *head,char *id,char *name,int courseCount);
+    void(*Append)(student_item_t **head,char *id,char *name,int courseCount);
     void(*Push)(student_item_t *head,char *id,char *name,int courseCount);
     void(*Remove)(student_item_t *head,char *id,char *name);
     void(*Print)(student_item_t *head);
@@ -22,9 +22,9 @@ typedef struct student_list_manager{
 }student_list_manager_t;
 
 void Push(student_item_t *head,char *id,char *name,int courseCount);
-void Append(student_item_t *head,char *id,char *name,int courseCount);
+void Append(student_item_t **head,char *id,char *name,int courseCount);
 void Remove(student_item_t *head,char *id,char *name);
 void Print(student_item_t *head);
-void InitList(student_list_manager_t *list, student_item_t *head);
+void InitList(student_list_manager_t *list, student_item_t **head);
 
 #endif

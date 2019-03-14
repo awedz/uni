@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "student.c"
 #include "string.h"
-//03-7347555
 void main() 
 {
     char test[] = "\0";
@@ -12,7 +11,9 @@ void main()
     }
     student_list_manager_t * list = (student_list_manager_t * ) malloc(sizeof(student_list_manager_t));
     student_item_t *head=(student_item_t*) malloc(sizeof(student_item_t));
-    InitList(list, head);
+    head->id[0] = '\0';
+    head->name[0] = '\0';
+    InitList(list, &head);
     for(int i = 0;i < 20;i++)
     {
         char n[] = {'a',(i+97)+'0','\0'};
@@ -23,7 +24,8 @@ void main()
         //list -> Push(list -> head, d, n, nu);
 
         //list -> Push(list -> head, d, n, nu);
-        list -> Append(list -> head, d, n, nu);
+        //printf("%s %s %d",d,n,nu);
+        list -> Append(&list -> head, d, n, nu);
     }
 
     list -> Print(list -> head);
