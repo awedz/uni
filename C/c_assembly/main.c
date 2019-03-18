@@ -5,8 +5,8 @@
 //     int data;
 //     struct node *next;
 // }node_t;
-void Add(struct node * head, int newData);
-void Print(struct node * head);
+// void Add(struct node * head, int newData);
+// void Print(struct node * head);
 void main()
 {
 
