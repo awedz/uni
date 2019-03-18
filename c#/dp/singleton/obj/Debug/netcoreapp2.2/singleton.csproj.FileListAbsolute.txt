@@ -1,0 +1,11 @@
+/home/aweds/Desktop/uni/c#/dp/singleton/bin/Debug/netcoreapp2.2/singleton.deps.json
+/home/aweds/Desktop/uni/c#/dp/singleton/bin/Debug/netcoreapp2.2/singleton.runtimeconfig.json
+/home/aweds/Desktop/uni/c#/dp/singleton/bin/Debug/netcoreapp2.2/singleton.runtimeconfig.dev.json
+/home/aweds/Desktop/uni/c#/dp/singleton/bin/Debug/netcoreapp2.2/singleton.dll
+/home/aweds/Desktop/uni/c#/dp/singleton/bin/Debug/netcoreapp2.2/singleton.pdb
+/home/aweds/Desktop/uni/c#/dp/singleton/obj/Debug/netcoreapp2.2/singleton.csprojAssemblyReference.cache
+/home/aweds/Desktop/uni/c#/dp/singleton/obj/Debug/netcoreapp2.2/singleton.csproj.CoreCompileInputs.cache
+/home/aweds/Desktop/uni/c#/dp/singleton/obj/Debug/netcoreapp2.2/singleton.AssemblyInfoInputs.cache
+/home/aweds/Desktop/uni/c#/dp/singleton/obj/Debug/netcoreapp2.2/singleton.AssemblyInfo.cs
+/home/aweds/Desktop/uni/c#/dp/singleton/obj/Debug/netcoreapp2.2/singleton.dll
+/home/aweds/Desktop/uni/c#/dp/singleton/obj/Debug/netcoreapp2.2/singleton.pdb
