@@ -14,7 +14,7 @@ void main()
     head->id[0] = '\0';
     head->name[0] = '\0';
     InitList(list, &head);
-    for(int i = 0;i < 20;i++)
+    for(int i = 0;i < 5;i++)
     {
         char n[] = {'a',(i+97)+'0','\0'};
         char d[] = {(i+97)+'0','\0'};

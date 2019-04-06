@@ -15,7 +15,7 @@ typedef struct student_item{
 typedef struct student_list_manager{
     student_item_t *head;
     void(*Append)(student_item_t **head,char *id,char *name,int courseCount);
-    void(*Push)(student_item_t *head,char *id,char *name,int courseCount);
+    student_item_t(*Push)(student_item_t *head,char *id,char *name,int courseCount);
     void(*Remove)(student_item_t *head,char *id,char *name);
     void(*Print)(student_item_t *head);
     

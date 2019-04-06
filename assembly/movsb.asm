@@ -1,0 +1,32 @@
+DSEG SEGMENT;data
+    BLOCK DB 10h dup(?)
+DSEG ENDS       
+
+SSEG SEGMENT STACK
+     DB 100H DUP(?)
+SSEG ENDS
+
+CSEG SEGMENT
+     ASSUME: CS:CSEG, DS:DSEG, SS:SSEG
+BEGIN:
+    MOV AX,DSEG
+    MOV DS,AX
+    MOV ES,AX
+    
+    
+    MOV AX,0fcffh
+    
+    
+    
+    
+    LEA DI,BLOCK
+    MOV AL,20h 
+    MOV CX,10h
+    CLD
+    REP STOSB
+    
+    MOV AH,4CH
+    INT 21H
+    
+CSEG ENDS
+END BEGIN
