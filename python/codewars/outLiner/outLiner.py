@@ -1,5 +1,5 @@
 def find_outlier(integers):
-    return [x for x in integers if x % 2 == 0][0]if sum([1 for x in integers if x % 2 == 0]) < sum(
+        return [x for x in integers if x % 2 == 0][0]if sum([1 for x in integers if x % 2 == 0]) < sum(
         [1 for x in integers if x % 2 != 0]) else[x for x in integers if x % 2 != 0][0]
 
 

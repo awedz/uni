@@ -15,4 +15,4 @@ def Crack():
                 if crypt(cur , dinSalt) == dinSalt+dinHash:
                     print(cur)
                     return 1
-        print("finish file {}".format(fileDir,fileName,i))
+        print("finish file {}{}{}".format(fileDir,fileName,i))
