@@ -35,11 +35,11 @@ Super_cnt = 0
 hello_cnt = 0
 
 for i in range(0, len(packets)):
-    pkt = str(packets[i])
-    google_cnt +=  pkt.count("google")
-    ynet_cnt +=  pkt.count("ynet")
-    Super_cnt +=  pkt.count("SuperPhramLogo.gif")
-    hello_cnt +=  pkt.count("HelloWorld")
+        pkt = str(packets[i])
+        google_cnt +=  pkt.count("google")
+        ynet_cnt +=  pkt.count("ynet")
+        Super_cnt +=  pkt.count("SuperPhramLogo.gif")
+        hello_cnt +=  pkt.count("HelloWorld")
 #print("google: {0}\nynet: {1}\nSuperPhramLogo.gif: {2}\nHelloWorld: {3}\n".format(google_cnt, ynet_cnt, Super_cnt, hello_cnt))
 
 #print("The amount of packets", len(pkt), "\n")
@@ -47,5 +47,9 @@ for i in range(0, len(packets)):
 a = ["\n".join(x.sprintf("{Raw:%Raw.load%}\n").split(r"\r\n")) for x in packets]
 b = [x.split("\n") for x in a]
 for p in b:
-    if "GET" in p[0]:
-        print(p[1])
+        if "GET" in p[0]:
+                print(p[1])
+# print(packets[4])
+print(packets[1].getlayer(IP).len)
+print(len(str(packets[1])))
+print(packets[1].show())

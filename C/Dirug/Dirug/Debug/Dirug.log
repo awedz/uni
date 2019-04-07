@@ -1,4 +1,0 @@
-﻿  Source.cpp
-c:\users\win10\desktop\c\dirug\dirug\source.cpp(12): warning C4326: return type of 'main' should be 'int' instead of 'void'
-c:\users\win10\desktop\c\dirug\dirug\source.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Dirug.vcxproj -> C:\Users\WIN10\Desktop\C\Dirug\Debug\Dirug.exe
