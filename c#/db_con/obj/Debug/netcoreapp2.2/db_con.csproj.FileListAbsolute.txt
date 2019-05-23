@@ -1,0 +1,11 @@
+/home/aweds/Desktop/uni/c#/db_con/obj/Debug/netcoreapp2.2/db_con.csprojAssemblyReference.cache
+/home/aweds/Desktop/uni/c#/db_con/obj/Debug/netcoreapp2.2/db_con.csproj.CoreCompileInputs.cache
+/home/aweds/Desktop/uni/c#/db_con/obj/Debug/netcoreapp2.2/db_con.AssemblyInfoInputs.cache
+/home/aweds/Desktop/uni/c#/db_con/obj/Debug/netcoreapp2.2/db_con.AssemblyInfo.cs
+/home/aweds/Desktop/uni/c#/db_con/bin/Debug/netcoreapp2.2/db_con.deps.json
+/home/aweds/Desktop/uni/c#/db_con/bin/Debug/netcoreapp2.2/db_con.runtimeconfig.json
+/home/aweds/Desktop/uni/c#/db_con/bin/Debug/netcoreapp2.2/db_con.runtimeconfig.dev.json
+/home/aweds/Desktop/uni/c#/db_con/bin/Debug/netcoreapp2.2/db_con.dll
+/home/aweds/Desktop/uni/c#/db_con/bin/Debug/netcoreapp2.2/db_con.pdb
+/home/aweds/Desktop/uni/c#/db_con/obj/Debug/netcoreapp2.2/db_con.dll
+/home/aweds/Desktop/uni/c#/db_con/obj/Debug/netcoreapp2.2/db_con.pdb

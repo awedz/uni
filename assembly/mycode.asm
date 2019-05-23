@@ -1,37 +1,38 @@
-SIZE EQU 8;ARRSIZE
-DSEG SEGMENT;data
-     BLOCKA DB SIZE dup(?)
-     BLOCKB DB SIZE dup(?)
-DSEG ENDS       
-
-SSEG SEGMENT STACK
-     DB 100H DUP(?)
-SSEG ENDS
-
-CSEG SEGMENT
-     ASSUME: CS:CSEG, DS:DSEG, SS:SSEG
-BEGIN:
-    MOV AX,DSEG
-    MOV DS,AX
-    MOV ES,AX
-    
-    LEA SI,BLOCKA
-    MOV AL,40h
-    call MoveToMem
-    
-    LEA SI,BLOCKB
-    MOV AL,50h
-    call MoveToMem
-    
+    CALL PRINT_1
+    CALL PRINT_2
     MOV AH,4CH
     INT 21H
     
-    MoveToMem:
-    MOV CX,SIZE
-    again:
-    MOV [SI],AL
-    INC SI
-    loop again
+    PRINT_1:
+    MOV AH,1
+    INT 21H
+    MOV CX,10
+    MOV DL,AL
+    CALL PRINT
     RET
-CSEG ENDS
-END BEGIN
+    
+    PRINT_2:
+    MOV AH,1
+    INT 21H
+    CMP AL,1
+    JZ EQ
+    MOV DL,'*'
+    MOV CX,15    
+    JMP END     
+    EQ:
+    MOV DL,'#'
+    MOV CX,8
+    END:     
+    CALL PRINT
+    RET
+    
+    PRINT:
+    MOV AH,2
+    AGAIN:
+    INT 21H
+    LOOP AGAIN
+    MOV DL,0Dh
+    INT 21H
+    MOV DL,0Ah
+    INT 21H
+    RET
