@@ -1,0 +1,52 @@
+MODUL EQU 10H;const
+DSEG SEGMENT;data
+     BUF   DW 034DH,45A7H,3125H,741CH,3322H
+     NUM   DB 5
+     MAX   DB 4
+     COUNT DB 0
+DSEG ENDS       
+
+SSEG SEGMENT STACK
+     DB 100H DUP(?)
+SSEG ENDS
+
+CSEG SEGMENT
+     ASSUME: CS:CSEG, DS:DSEG, SS:SSEG
+BEGIN:
+    MOV AX,DSEG
+    MOV DS,AX
+    MOV ES,AX
+    
+    LEA DI,BUF;array
+    LEA SI,COUNT 
+    MOV BL,modul;mod
+    MOV CL,NUM;run times
+    MOV CH,00
+    
+    NEXT:
+    MOV AX,[DI]
+    AGAIN:
+    MOV BH,AH
+    MOV AH,00
+    DIV BL
+    CMP AL,MAX
+    JNZ NO1
+    INC [SI]
+    NO1:
+    MOV AL,00
+    CMP AH,MAX
+    JNZ NO2
+    INC [SI]
+    NO2:
+    MOV AH,00
+    MOV AL,BH
+    CMP AL,00
+    JNZ AGAIN
+    INC DI
+    INC DI
+    LOOP NEXT
+    
+    MOV AH,4CH
+    INT 21H   
+CSEG ENDS
+END BEGIN

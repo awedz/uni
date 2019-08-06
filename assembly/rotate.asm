@@ -1,0 +1,71 @@
+MODUL EQU 10;const
+SIZE EQU 8;ARRSIZE
+DSEG SEGMENT;data
+     BLOCKA DW 1234,6412,9654,2311,7619
+     BLOCKB DW 4321,2146,9999,8888,9167
+     SIZE DW 5 
+DSEG ENDS       
+
+SSEG SEGMENT STACK
+     DB 100H DUP(?)
+SSEG ENDS
+
+CSEG SEGMENT
+     ASSUME: CS:CSEG, DS:DSEG, SS:SSEG
+BEGIN:
+MOV AX,DSEG
+MOV DS,AX
+
+;ax - bloacka
+;bx - blockb
+
+LEA SI,BLOCKA
+PUSH SI
+LEA SI,BLOCKB
+PUSH SI
+
+
+CALL FIND
+
+
+MOV AH,4CH
+INT 21H
+
+
+FIND:
+MOV BP,SP;get current stack adress
+MOV SI,[BP+4];adress to blocka from stack
+MOV DI,[BP+2]  ;adress from blockb from stack
+MOV CX,5     ;blocks size
+MOV DH,0
+
+AGAIN:
+PUSH CX
+MOV AX,[SI]
+MOV BX,[DI]
+
+MOV CL,8 ;switch number xxyy => yyxx
+ROR AX,CL
+
+MOV CL,4 ;
+ROR AL,CL
+ROR AH,CL
+
+CMP AX,BX
+JZ NEXT
+
+INC DH
+   
+NEXT:
+INC SI
+INC DI
+POP CX   
+LOOP AGAIN
+
+MOV CL,DH
+RET 2
+
+
+
+CSEG ENDS
+END BEGIN

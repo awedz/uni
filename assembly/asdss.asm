@@ -1,0 +1,35 @@
+DSEG SEGMENT
+    A1	DB 31H,'1',43
+    A2 	DW 0AH
+    A3	DB 2 DUP(10,0ABh)
+    A4	DW 0A0H
+DSEG ENDS
+
+SSEG SEGMENT STACK
+     DB 100H DUP(?)
+SSEG ENDS
+
+CSEG SEGMENT
+     ASSUME: CS:CSEG, DS:DSEG, SS:SSEG
+BEGIN:
+    MOV AX,DSEG
+	MOV DS,AX
+    
+    MOV AX,5
+    MOV BX,1
+    MOV CX,2
+    MOV DX,6
+    MOV SI,4
+    MOV DI,3  
+    
+	;ROL A1[BX] ,CX ;not legal - needs to be CL
+	;DEC BYTE PTR [A1+ 1 + SI][BX];legal
+	;MOV A2[BX+DI],SI;legal
+	;SUB WORD PTR A2[DI,SI],AL;not legal
+
+
+        
+    MOV AX,4C00H
+    int 21H
+CSEG ENDS
+END BEGIN
